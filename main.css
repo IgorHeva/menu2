@@ -1,0 +1,162 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, 
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: inline-block;
+}
+body{
+    background-color: bisque;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+.main{
+    text-align: center;
+    font-size: 0;
+}
+.head{
+    display: inline-block;
+    background:blue;
+    font-size:30px ;
+    position: relative;
+}
+.head3{
+    display: inline-block;
+    background:blue;
+    font-size:30px ;
+    position: relative;
+}
+ul li+li{
+    border-left: 2px solid black;
+}
+
+ul li:hover{
+    background: red;
+}
+ul li a{
+    text-decoration: none;
+    color: aqua;
+    text-transform: uppercase;
+    padding: 10px 50px ;
+    display: block;
+    position: relative;
+}
+.second{
+    position: absolute;
+    top: -500%;
+    left: 0;
+    background: blue;
+    text-align: center;
+    transition: top 500ms linear;
+
+}
+ul li:hover .second{
+    top: 100%;
+    transition: top 500ms linear;
+}
+ul ul li{
+    border: none;
+}
+.float{
+    position: relative;
+    
+}
+.infloat{
+    position: absolute;
+    left: 0;
+    top: 0%;
+    background: blue;
+    transition: left 400ms linear;
+    z-index: -5;
+}
+.float:hover .infloat{
+    left: 100%;
+    transition: left 400ms linear;
+}
+.grid{
+    position: relative;
+}
+.ingrid{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: blue;
+    z-index: -5;
+    transition: right 400ms linear;
+}
+.grid:hover .ingrid{
+    right: 100%;
+    transition: right 400ms linear;
+
+}
+ul li a:before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: url("img/sprites.png");
+    display: inline-block;
+}
+ul li a:before{
+    background-position: -110px -130px;
+}
+ul li+li a:before{
+    background-position: -60px -130px;
+}
+.head3 ::before{
+    background-position: -60px -180px;
+    top: 20%;
+    left: 85%;
+}
+:before{
+    position: absolute;
+    left: 0;
+    top: 20%;
+}
+
+.float :before{
+    background-position: -10px -180px;
+}
+.grid :before{
+    background-position: -160px -130px;
+    top: 20%;
+    right: 80%;
+    left: auto;
+}
+.head3:hover ::before{
+    background-position: -10px -130px;
+}
+.second ::before{
+    content: "";
+}
+.grid :hover a::before{
+    background-position: -160px -130px;
+    top: 20%;
+    right: 90%;
+    left: auto;
+}
+.float:hover ::before{
+    background-position: -10px -180px;
+}
+.grid:hover ::before{
+    background-position: -160px -130px;
+}
